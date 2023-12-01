@@ -1,0 +1,23 @@
+li{
+    position: relative;
+    font-weight: bold;
+}
+li::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    transition: 0.3s;
+    height: 3px;
+    background: orange;
+    bottom: -90%;
+    left: 0;
+}
+li:hover::after{
+    width: 100%;
+}
+
+@media (max-width:640px) {
+    li::after{
+        bottom:-5px
+    }
+}
